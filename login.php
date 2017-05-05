@@ -1,3 +1,6 @@
+<?php
+include_once("view/vlogin.php");
+?>
 <html>
 <body>
   <div class='container' align="center">
