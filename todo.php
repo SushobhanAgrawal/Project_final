@@ -1,6 +1,6 @@
 <?php
 include_once("db.php");
-//include("auth.php");
+//include('auth.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,14 +15,16 @@ include_once("db.php");
   echo "<div style='text-align:right'><h1>Welcome ". $_SESSION['fname']."!</h1></div>";
   ?>
   <h2> Todo list : </h2>
-  <div class="wrap">
-  <div class="task-list">
-    <ul>
-         <?php require("includes/connect.php"); ?>
-    <?ul>
-
-
-
+      <div class="wrap">
+ <div class="task-list">
+     <ul>
+                <?php require("includes/connect.php"); ?>
+     </ul>
+ </div>
+  <form class="add-new-task" autocomplete="off">
+      <input type="text" name="new-task" placeholder="Add a new item..." />
+ </form>
+      </div>
   <p><a href="todo.php">Home</a></p>
   <a href="logout.php">Logout</a>
   </div>
