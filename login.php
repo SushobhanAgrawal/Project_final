@@ -5,7 +5,7 @@ include_once("view/vlogin.php");
 <body>
   <div class='container' align="center">
 
-    <form method = "post" action="index.php" class="login">
+    <form method = "post" action="todo.php" class="login">
       <div>
         <label><b>Username</b></label>
         <input type="text" name="reg_uname" placeholder="Enter Username" required>
@@ -20,7 +20,7 @@ include_once("view/vlogin.php");
       </div>
     </form>
 
-    <form action="register.php" class="register">
+    <form action="view/register.php" class="register">
       <div>
         <button type="submit">Sign up</button>
       </div>

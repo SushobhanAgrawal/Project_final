@@ -10,7 +10,8 @@ include_once("model/db.php");
 </head>
 <div class="form">
 <h1>Registration</h1>
-<form name="registration" action="" method="post">
+<form name="registration" action="../index.php" method="post">
+<input type = "hidden" name="action" value="register"/>
 First Name : &nbsp<input type="text" name="fname" placeholder="Fname" required /><br><br>
 Last Name : &nbsp<input type="text" name="lname" placeholder="Lname" required /><br><br>
 User Name : <input type="text" name="username" placeholder="Username" required /><br><br>
