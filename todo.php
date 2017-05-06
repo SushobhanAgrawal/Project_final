@@ -11,8 +11,7 @@ include_once("db.php");
 </head>
 <body>
 <?php
-echo "Welcome";
-echo "";
+echo "<div style='text-align:right'><h1>Welcome ". $_SESSION['fname']."!</h1></div>";
 ?>
 <div>
 <h2> Todo list : </h2>
