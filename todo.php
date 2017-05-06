@@ -1,20 +1,20 @@
 <?php
-//require('db.php');
-//include("auth.php");
-echo "hello";
+//include("db.php");
+//include_once("auth.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Dashboard - Secured Page</title>
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 <div>
-<p>Dashboard</p>
+<h2> Todo list : </h2>
 
-<p>This is another secured page.</p>
-<p><a href="index.php">Home</a></p>
+
+<p><a href="todo.php">Home</a></p>
 <a href="logout.php">Logout</a>
 </div>
 </body>

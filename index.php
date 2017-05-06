@@ -29,10 +29,9 @@ if($userExists == true){
 	include("todo_manager/list.php");
    }else{
 
- header("Location: view/loginError.php");
+ header("Location: view/badInfo.php");
 
    }
-
 
 }else{
  header("Location: view/badInfo.php");

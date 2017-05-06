@@ -22,7 +22,7 @@ include_once("view/vlogin.php");
 
     <form action="view/register.php" class="register">
       <div>
-        <button type="submit">Sign up</button>
+<p>Not registered yet?</p> <button type="submit">Sign up</button>
       </div>
     </form>
 
