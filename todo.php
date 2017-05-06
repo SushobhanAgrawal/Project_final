@@ -12,9 +12,9 @@ include_once("db.php");
 
 <body>
   <?php
-  echo "<div style='text-align:right'><h1>Welcome ". $_SESSION['fname']."!</h1></div>";
-  ?>
-  <h2> Todo list : </h2>
+  echo "<div style='text-align:right'><h1>Welcome ".$_COOKIE['login']."!</h1></div>";
+  ?><hr>
+  <h1> To-do list : </h1>
       <div class="wrap">
  <div class="task-list">
      <ul>

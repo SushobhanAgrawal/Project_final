@@ -16,13 +16,13 @@ else if($action=='test_user')
 
       $username = $_POST['username'];
       $password = $_POST['password'];
-      echo $username.$password;
       $suc = isUserValid($username,$password);
+      
        if($suc == true){
-
+        
 //	$result = getTodoItems($_COOKIE['my_id']);
 
-	include('todo.php');
+	include_once('todo.php');
        }
         else{
 
