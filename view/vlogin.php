@@ -3,10 +3,11 @@
   <title>Login Page</title>
   
   <style type="text/css">
+  body {background-color: lightblue;}
     div.container {
-      border: 6px solid #000000;
-      padding: 6px;
-      width:300px;
+      border: 20px solid #000000;
+      padding: 12px;
+      width:900px;
       margin:20px auto;
       text-align:center;  
     }
@@ -14,7 +15,7 @@
       background:#f9f9f9; 
     }
     .login div {
-      border:2px solid #fff;
+      border:20px solid #fff;
       padding:3px;
     }
     .register { 
@@ -30,7 +31,7 @@
       border: 1px solid #ccc;
     }
     button {
-      background-color: #4169E1;
+      background-color: #000080;
       color: white;
       padding: 6px 15px;
       margin: 8px 0;
