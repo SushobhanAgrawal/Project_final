@@ -1,7 +1,6 @@
 <?php
 require('model/db.php');
 require('model/db_register.php');
-//require('model/login_db.php');
 
 $action = filter_input(INPUT_POST, "action");
 if($action == NULL)
@@ -15,8 +14,8 @@ if($action == "show_login_page")
 
 else if($action=='test_user'){
 
-$username = $_POST['reg_uname'];
-$password = $_POST['reg_password'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 $suc = isUserValid($username,$password);
 $userExists = isUserExist($username);
@@ -46,10 +45,8 @@ if($userExists == true){
   $lastname = filter_input(INPUT_POST, 'lname');
   $email = filter_input(INPUT_POST, 'email');
   
-  
    $user_exists = createUser($name,$pass,$firstname,$lastname,$email);
    header("Location: login.php");
 
- echo "we want to create a registrar";
  }
 ?>
