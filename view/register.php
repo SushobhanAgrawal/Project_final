@@ -12,8 +12,8 @@ include_once("model/db.php");
 <h1>Registration</h1>
 <form name="registration" action="../index.php" method="post">
 <input type = "hidden" name="action" value="register"/>
-First Name : <input type="text" name="fname" placeholder="firstname" required /><br><br>
-Last Name : <input type="text" name="lname" placeholder="lastname" required /><br><br>
+First Name : <input type="text" name="fname" placeholder="Enter first name" required /><br><br>
+Last Name : <input type="text" name="lname" placeholder="Enter last name" required /><br><br>
 Gender : <br>
 <input type="radio" name="gender"
 <?php if (isset($gender) && $gender=="female") echo "checked";?>
@@ -21,9 +21,9 @@ value="female">Female<br>
 <input type="radio" name="gender"
 <?php if (isset($gender) && $gender=="male") echo "checked";?>
 value="male">Male<br><br>
-User Name : <input type="text" name="username" placeholder="Username" required /><br><br>
-Email : <br><input type="email" name="email" placeholder="Email" required /><br><br>
-Password : <input type="password" name="password" placeholder="Password" required /><br><br>
+User Name : <input type="text" name="username" placeholder="Enter Username" required /><br><br>
+Email : <br><input type="email" name="email" placeholder="Enter Email" required /><br><br>
+Password : <input type="password" name="password" placeholder="Enter Password" required /><br><br>
 <input type="submit" name="submit" value="Register" /><br>
 </form>
 </div>
