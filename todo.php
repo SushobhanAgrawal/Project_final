@@ -9,16 +9,22 @@ include_once("db.php");
 <title>Todo List</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-<?php
-echo "<div style='text-align:right'><h1>Welcome ". $_SESSION['fname']."!</h1></div>";
-?>
-<div>
-<h2> Todo list : </h2>
+  <?php
+  echo "<div style='text-align:right'><h1>Welcome ". $_SESSION['fname']."!</h1></div>";
+  ?>
+  <h2> Todo list : </h2>
+  <div class="wrap">
+  <div class="task-list">
+    <ul>
+         <?php require("includes/connect.php"); ?>
+    <?ul>
 
 
-<p><a href="todo.php">Home</a></p>
-<a href="logout.php">Logout</a>
-</div>
+
+  <p><a href="todo.php">Home</a></p>
+  <a href="logout.php">Logout</a>
+  </div>
 </body>
 </html>
