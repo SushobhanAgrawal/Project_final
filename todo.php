@@ -1,6 +1,5 @@
 <?php
-include_once("db.php");
-//include('auth.php');
+//require('db.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +15,7 @@ include_once("db.php");
   ?><hr>
   <h1> To-do list : </h1>
       
-  <p><a href="index.php">Home</a></p>
+  <p><a href="todo.php">Home</a></p>
   <a href="logout.php">Logout</a>
   </div>
 </body>
