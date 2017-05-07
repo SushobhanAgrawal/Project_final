@@ -9,7 +9,7 @@ include_once("model/db.php");
 <link rel="stylesheet" href="../css/style.css" />
 </head>
 <div class="form">
-<h1>Registration</h1>
+<h1>Registration Form</h1><hr><br>
 <form name="registration" action="../index.php" method="post">
 <input type = "hidden" name="action" value="register"/>
 First Name : <input type="text" name="fname" placeholder="Enter first name" required /><br><br>
@@ -24,7 +24,7 @@ value="male">Male<br><br>
 User Name : <input type="text" name="username" placeholder="Enter Username" required /><br><br>
 Email : <br><input type="email" name="email" placeholder="Enter Email" required /><br><br>
 Password : <input type="password" name="password" placeholder="Enter Password" required /><br><br>
-<input type="submit" name="submit" value="Register" /><br>
+<input type="submit" name="submit" value="REGISTER" /> OR <a href = '../login.php'>LOGIN</a>
 </form>
 </div>
 </html>
