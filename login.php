@@ -3,6 +3,7 @@ include_once("view/vlogin.php");
 ?>
 <html>
 <body>
+<br><br><hr>
 
   <div class='container' align="center">
       <h1>Login Page</h1>
@@ -22,11 +23,11 @@ include_once("view/vlogin.php");
       </div>
     </form>
 
-//    <form action="view/register.php" class="register">
+    <form action="view/register.php" class="register">
       <div>
-<p>Not registered yet? &nbsp<a href = 'view/register.php'>Create an account</a></p>
+<p>Not registered yet? &nbsp&nbsp&nbsp<a href = 'view/register.php'>Create an account</a></p>
       </div>
-//    </form>
+    </form>
 
   </div>
 </body>
