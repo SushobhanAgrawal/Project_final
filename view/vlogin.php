@@ -31,7 +31,7 @@
       border: 1px solid #ccc;
     }
     button {
-      background-color: #000080;
+      background-color: #024978;
       color: white;
       padding: 6px 15px;
       margin: 8px 0;
