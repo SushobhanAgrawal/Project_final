@@ -1,5 +1,6 @@
 <?php
 //require('db.php');
+//require('db_login.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +16,7 @@
   echo "<div style='text-align:right'><h2>Welcome ".$_COOKIE['login']." !!</h2></div>";
   ?><hr>
     
-  <p><a href="newtask.phpnewtask.php?userid=$userid&fname=$fname&lname=$lname">Todo List</a></p>
+  <p><a href="newtask.php?userid=$userid&fname=$fname&lname=$lname">Todo List</a></p>
   <a href="logout.php">Logout</a>
   </div>
 </body>

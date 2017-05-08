@@ -13,6 +13,9 @@ $count=$statement->rowCount();
   {
     $fullname=$result[0]['fname']." ".$result[0]['lname'];
     setcookie('login',$fullname);
+    //setcookie('userid',$username)
+    //setcookie('fname',$fname)
+    //setcookie('lname',$lname)
     return true;
   }
   else 
