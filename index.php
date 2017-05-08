@@ -96,5 +96,17 @@ else if($action == "edit"){
     $lname = $_COOKIE['lname'];
     header("Location: newtask.php?ownerid=$owner_id&fname=$fname&lname=$lname");
 
+}else if($action == 'after_edit'){
+    $task = $_POST['task'];
+    $duedate = $_POST['duedate'];
+    $createddate = $_POST['createddate'];
+    $item_id = $_POST['item_id'];
+    $sql ='UPDATE my_tasks SET `task` = "'.$task.'", `duedate` = "'.$duedate.'",`createddate` = "'.$createddate.'" WHERE taskid = "'.$item_id.'"';
+    $result = runQuery($sql);
+
+    $owner_id = $_COOKIE['ownerid'];
+    $fname = $_COOKIE['fname'];
+    $lname = $_COOKIE['lname'];
+    header("Location: newtask.php?ownerid=$owner_id&fname=$fname&lname=$lname");
 }
 ?>
