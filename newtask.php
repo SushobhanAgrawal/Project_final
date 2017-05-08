@@ -66,6 +66,44 @@
                   <?php endforeach;?>
                 </table>
             </table>
+            
+            <table id="mytable" class="table table-bordred table-striped" style="color:black;">
+                <thead>
+                  <th style="width:65%">Task</th>
+                  <th style="width:10%">Due Date</th>
+                  <th style="width:10%">Edit</th>
+                  <th style="width:10%">Delete</th>
+                  <th style="width:10%">Status</th>
+                </thead>
+                <table>
+                   <?php foreach($result as $res):?>
+                    <tr>                    
+                      <?php $item_status = $res['isdone'];?>
+                       <?php if($item_status == 1): ?>
+                      
+                        <td style="width:65%"> <?php echo $res['task'];?></td>
+                        <td style="width:10%"> <?php echo $res['duedate'];?></td>
+                        <td style="width:10%">
+                          <form action = 'index.php' method = 'post' >
+                            <input type="hidden" class="btn btn-danger" name = 'action' value="edit"/>
+                            <input type="hidden" class="btn btn-danger" name = 'item_id' value="<?php echo $res['taskid']; ?>"/>
+                            <input type="submit" class="btn btn-danger" value="edit"/>
+                          </form>
+                        </td>
+                        <td style="width:10%">
+                          <form action = 'index.php' method = 'post' >
+                            <input type="hidden" class="btn btn-danger" name = 'action' value="delete"/>
+                            <input type="hidden" class="btn btn-danger" name = 'item_id' value="<?php echo $res['taskid'];?>"/>
+                            <input type="submit" class="btn btn-danger" value="delete"/>
+                          </form>
+                        </td>
+                        
+                      <?php endif; ?>
+                    </tr>
+                  <?php endforeach;?>
+                </table>
+            </table>
+            
             <form action="addtask.php">
               <input type="submit" value="Add New Task" class="btn btn-default" />
             </form>
