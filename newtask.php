@@ -1,60 +1,15 @@
 <?php 
-  $owner_id = $_GET['ownerid'];
-  $fname = $_GET['fname'];
-  $lname = $_GET['lname'];
-  require('pdoConnect.php');
-  $sql = 'select * from my_tasks where ownerid = "'.$owner_id.'"';
-  $results = runQuery($sql);
+//  $user_id = $_GET['user_id'];
+//  $fname = $_GET['fname'];
+//  $lname = $_GET['lname'];
+//  require('db.php');
+//  $sql = 'select * from todo where user_id = "'.$user_id.'"';
+//  $results = runQuery($sql);
 ?>
-
-
 
 <html>
 <head>
-  <style>
-    input[type=checkbox]:checked + label.strikethrough{
-    text-decoration: line-through;
-    }
-    .todolist{
-        background-color:#FFF;
-        padding:20px 20px 10px 20px;
-        margin-top:30px;
-    }
-    .todolist h1{
-        margin:0;
-        padding-bottom:20px;
-        text-align:center;
-    }
-    .form-control{
-        border-radius:0;
-    }
-    li.ui-state-default{
-        background:#fff;
-        border:none;
-        border-bottom:1px solid #ddd;
-    }
-
-    li.ui-state-default:last-child{
-        border-bottom:none;
-    }
-
-    .todo-footer{
-        background-color:#F4FCE8;
-        margin:0 -20px -10px -20px;
-        padding: 10px 20px;
-    }
-    #done-items li{
-        padding:10px 0;
-        border-bottom:1px solid #ddd;
-        text-decoration:line-through;
-    }
-    #done-items li:last-child{
-        border-bottom:none;
-    }
-    #checkAll{
-        margin-top:10px;
-    }
-  </style>
+<link rel="stylesheet" href="css/task.css" />
 </head>
 <body>
 
