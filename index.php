@@ -9,11 +9,10 @@ if($action == NULL)
    $action = "show_login_page";
 }
 if($action == "show_login_page"){
-       include('login.php');
+       header("Location: login.php");
 }
 else if($action=='test_user')
 {
-
       $username = $_POST['username'];
       $password = $_POST['password'];
       $suc = isUserValid($username,$password);
