@@ -81,5 +81,20 @@ else if($action == "edit"){
     $lname = $_COOKIE['lname'];
     header("Location: newtask.php?ownerid=$owner_id&fname=$fname&lname=$lname");
 
+}else if($action == "add_task"){
+    $ownerid = $_COOKIE['ownerid'];
+    $owner_email = $_COOKIE['owner_email'];
+    $due_date = $_POST['duedate'];
+    $create_date = $_POST['createddate'];
+    $task = $_POST['task'];
+    $isdone = 0;
+    $sql = 'INSERT INTO my_tasks (`owneremail`, `ownerid`, `createddate`, `duedate`, `task`, `isdone`) VALUES ("'.$owner_email.'", "'.$ownerid.'", "'.$create_date.'", "'.$due_date.'", "'.$task.'", "'.$isdone.'")';
+    $result = runQuery($sql);
+
+    $owner_id = $_COOKIE['ownerid'];
+    $fname = $_COOKIE['fname'];
+    $lname = $_COOKIE['lname'];
+    header("Location: newtask.php?ownerid=$owner_id&fname=$fname&lname=$lname");
+
 }
 ?>
