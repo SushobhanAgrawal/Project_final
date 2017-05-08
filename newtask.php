@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*  $userid = $_GET['userid'];
   $fname = $_GET['fname'];
   $lname = $_GET['lname'];
@@ -32,39 +32,39 @@
                   <th style="width:10%">Delete</th>
                   <th style="width:10%">Status</th>
                 </thead>
-                <tabel>
-                   <?php foreach($results as $res):?>
+                <table>
+                   <?php foreach($result as $res):?>
                     <tr>                    
-                      <?php $item_status = $res['isdone'];
-                        if ($item_status == 0){
-                      ?>
-                        <td> <?php echo $res['task'];?></td>
-                        <td> <?php echo $res['duedate'];?></td>
-                        <td>
+                      <?php $item_status = $res['isdone'];?>
+                       <?php if($item_status == 0): ?>
+                      
+                        <td style="width:65%"> <?php echo $res['task'];?></td>
+                        <td style="width:10%"> <?php echo $res['duedate'];?></td>
+                        <td style="width:10%">
                           <form action = 'index.php' method = 'post' >
                             <input type="hidden" class="btn btn-danger" name = 'action' value="edit"/>
                             <input type="hidden" class="btn btn-danger" name = 'item_id' value="<?php echo $res['taskid']; ?>"/>
                             <input type="submit" class="btn btn-danger" value="edit"/>
                           </form>
                         </td>
-                        <td>
+                        <td style="width:10%">
                           <form action = 'index.php' method = 'post' >
                             <input type="hidden" class="btn btn-danger" name = 'action' value="delete"/>
                             <input type="hidden" class="btn btn-danger" name = 'item_id' value="<?php echo $res['taskid'];?>"/>
                             <input type="submit" class="btn btn-danger" value="delete"/>
                           </form>
                         </td>
-                        <td>
+                        <td style="width:10%">
                           <form action = 'index.php' method = 'post' >
                             <input type="hidden" class="btn btn-danger" name = 'action' value="complete"/>
                             <input type="hidden" class="btn btn-danger" name = 'item_id' value="<?php echo $res['taskid'];?>"/>
                             <input type="submit" class="btn btn-danger" value="Complete"/>
                           </form>
                         </td>
-                      <?php } ?>
+                      <?php endif; ?>
                     </tr>
                   <?php endforeach;?>
-                </tabel>
+                </table>
             </table>
             <form action="addtask.php">
               <input type="submit" value="Add New Task" class="btn btn-default" />

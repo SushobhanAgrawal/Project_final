@@ -1,6 +1,5 @@
 <?php
-function runQuery($username){
-  echo $username;
+function getItem($username){
  global $db;
 $query = 'select * from todos where userid=:userid';
 $statement = $db-> prepare($query);
