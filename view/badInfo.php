@@ -8,7 +8,7 @@
   </head>
   
   <body>
-    <br><br><hr>
+    <hr size="100">
     <div class="alert">
       <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
     <p><h2>LOGIN ERROR : </h2><h3>Incorrect username or password entered</h3><br><br>

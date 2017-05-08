@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <hr size="100">
   <?php
   echo "<div style='text-align:right'><h2>Welcome ".$_COOKIE['login']." !!</h2></div>";
   ?><hr>

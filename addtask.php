@@ -1,6 +1,7 @@
 <html>
 <body>
 <link rel="stylesheet" href="css/style.css" />
+<hr size="100">
 
   <div id="about" class="container-fluid">
     <div class="row">

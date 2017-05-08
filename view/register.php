@@ -8,6 +8,7 @@ include_once("model/db.php");
 <title>Registration</title>
 <link rel="stylesheet" href="../css/style.css" />
 </head>
+<hr size="100">
 <div class="form">
 <h1>Registration Form</h1><hr><br>
 <form name="registration" action="../index.php" method="post">

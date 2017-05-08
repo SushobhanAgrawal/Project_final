@@ -3,7 +3,7 @@ include_once("view/vlogin.php");
 ?>
 <html>
 <body>
-<br><br><hr>
+<hr size="100">
 
   <div class='container' align="center">
       <h1>Login Page</h1>
