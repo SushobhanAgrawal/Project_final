@@ -3,7 +3,7 @@
   $fname = $_GET['fname'];
   $lname = $_GET['lname'];
   require('db.php');
-  $sql = 'select * from todos where userid = "'.$userid.'"';
+  require('runq.php');
   $results = runQuery($sql);
 */?>
 
