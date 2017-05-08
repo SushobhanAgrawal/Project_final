@@ -48,5 +48,16 @@ else if($action == "edit"){
     $id = $_POST['item_id'];
     header("Location: edit.php?itemid=$id");
 
+}else if($action == "delete"){
+
+    $id = $_POST['item_id'];
+    $sql = 'delete from my_tasks where taskid = "'.$id.'"';
+    $results = runQuery($sql);
+
+    $owner_id = $_COOKIE['ownerid'];
+    $fname = $_COOKIE['fname'];
+    $lname = $_COOKIE['lname'];
+    header("Location: newtask.php?ownerid=$owner_id&fname=$fname&lname=$lname");
+
 }
 ?>
