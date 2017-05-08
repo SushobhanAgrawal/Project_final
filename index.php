@@ -40,6 +40,7 @@ else if($action == 'register')
 else{
  header("Location: view/badInfo.php");
     }
+/*
 else if($action == "edit"){
     $id = $_POST['item_id'];
     header("Location: edit.php");
@@ -105,4 +106,5 @@ else if($action == "edit"){
     $lname = $_COOKIE['lname'];
     header("Location: newtask.php?ownerid=$owner_id&fname=$fname&lname=$lname");
 }
+*/
 ?>

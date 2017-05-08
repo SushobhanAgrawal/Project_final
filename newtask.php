@@ -1,5 +1,5 @@
 <?php 
-//  $user_id = $_GET['user_id'];
+//  $item_id = $_GET['item_id'];
 //  $fname = $_GET['fname'];
 //  $lname = $_GET['lname'];
 //  require('db.php');
@@ -10,6 +10,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/task.css" />
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <?php

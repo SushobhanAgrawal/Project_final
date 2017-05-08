@@ -1,5 +1,6 @@
 <html>
 <body>
+<link rel="stylesheet" href="css/style.css" />
 
   <div id="about" class="container-fluid">
     <div class="row">
