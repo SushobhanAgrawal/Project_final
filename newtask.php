@@ -12,20 +12,10 @@
 <link rel="stylesheet" href="css/task.css" />
 </head>
 <body>
+  <?php
+  echo "<div style='text-align:right'><h2>Welcome ".$_COOKIE['login']." !!</h2></div>";
+  ?><hr>
 
-  <!-- Container (About Section) -->
-  <div id="about" class="container-fluid">
-    <div class="row">
-      <div class="col-sm-8">
-        <!-- <h1 style="color:black"> -->
-            <?php echo "<h1 style='color:black'>Welcome, ".$fname." ".$lname."</h1>";?> !
-        <!-- </h1> -->
-      </div>
-    </div>
-  </div>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
 <div class="container">
     <div class="row">
