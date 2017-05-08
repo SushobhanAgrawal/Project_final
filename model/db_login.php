@@ -42,4 +42,41 @@ $statement->execute();
 $result=$statement->fetchAll();
 $statement->closeCursor();
 }
+
+function editItem($task,$date,$createdate,$item_id)
+{
+global $db;
+ $query = 'UPDATE todos SET task = :task, duedate = :duedate,createdate = :createddate WHERE taskid = :item_id';
+  $statement = $db-> prepare($query);
+  $statement->bindValue(':task',$task);
+  $statement->bindValue(':duedate',$date);
+  $statement->bindValue(':createddate',$createdate);
+  $statement->bindValue(':item_id',$item_id);
+  $statement->execute();
+  $statement->closeCursor();
+}
+
+function deleteItem($id){
+  global $db;
+  $query= 'delete from todos where taskid = :id';
+
+   $statement = $db-> prepare($query);
+     $statement->bindValue(':id',$id);
+       $statement->execute();
+       $statement->closeCursor();
+
+}
+
+function completeItem($taskid,$isdone)
+{
+global $db;
+ $query = 'UPDATE todos SET isdone = :isdone WHERE taskid = :taskid';
+  $statement = $db-> prepare($query);
+  $statement->bindValue(':isdone',$isdone);
+  $statement->bindValue(':taskid',$taskid);
+  
+  $statement->execute();
+  $statement->closeCursor();
+}
+
 ?>
