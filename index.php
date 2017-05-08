@@ -19,7 +19,6 @@ else if($action=='test_user')
       
        if($suc == true){
         
-//	$result = getTodoItems($_COOKIE['my_id']);
 
 	include_once('todo.php');
        }
@@ -45,5 +44,9 @@ else if($action == 'register')
 else{
  header("Location: view/badInfo.php");
     }
+else if($action == "edit"){
+    $id = $_POST['item_id'];
+    header("Location: edit.php?itemid=$id");
 
+}
 ?>
