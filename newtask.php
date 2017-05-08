@@ -74,7 +74,7 @@
     </div>
   </div>
 </div>
-<hr>
+<br><hr><br>
 <a href = "comtask.php">Completed task</a>
 </body>
 </html>

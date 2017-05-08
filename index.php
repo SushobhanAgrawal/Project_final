@@ -51,33 +51,33 @@ else if($action == "edit"){
     $sql = 'delete from todos where taskid = "'.$id.'"';
     $results = runQuery($sql);
 
-    $owner_id = $_COOKIE['userid'];
+/*    $owner_id = $_COOKIE['userid'];
     $fname = $_COOKIE['fname'];
     $lname = $_COOKIE['lname'];
     header("Location: newtask.php?userid=$userid&fname=$fname&lname=$lname");
-
+*/
 }else if($action == "complete"){
     $item_id = $_POST['item_id'];
     $isdone = 1;
     $sql ='UPDATE todos SET `isdone` = "'.$isdone.'" WHERE taskid = "'.$item_id.'"';
     $result = runQuery($sql);
-
+/*
     $userid = $_COOKIE['userid'];
     $fname = $_COOKIE['fname'];
     $lname = $_COOKIE['lname'];
     header("Location: newtask.php?userid=$userid&fname=$fname&lname=$lname");
-
+*/
 }else if($action == "incomplete"){
     $item_id = $_POST['item_id'];
     $isdone = 0;
     $sql ='UPDATE todos SET `isdone` = "'.$isdone.'" WHERE taskid = "'.$item_id.'"';
     $result = runQuery($sql);
-
+/*
     $userid = $_COOKIE['userid'];
     $fname = $_COOKIE['fname'];
     $lname = $_COOKIE['lname'];
     header("Location: newtask.php?userid=$userid&fname=$fname&lname=$lname");
-
+*/
 }else if($action == "add_task"){
     $userid = $_COOKIE['userid'];
     $useremail = $_COOKIE['useremail'];
@@ -87,12 +87,12 @@ else if($action == "edit"){
     $isdone = 0;
     $sql = 'INSERT INTO todos (`useremail`, `userid`, `createddate`, `duedate`, `task`, `isdone`) VALUES ("'.$useremail.'", "'.$userid.'", "'.$create_date.'", "'.$due_date.'", "'.$task.'", "'.$isdone.'")';
     $result = runQuery($sql);
-
+/*
     $userid = $_COOKIE['userid'];
     $fname = $_COOKIE['fname'];
     $lname = $_COOKIE['lname'];
     header("Location: newtask.php?userid=$userid&fname=$fname&lname=$lname");
-
+*/
 }else if($action == 'after_edit'){
     $task = $_POST['task'];
     $duedate = $_POST['duedate'];
@@ -100,11 +100,12 @@ else if($action == "edit"){
     $item_id = $_POST['item_id'];
     $sql ='UPDATE todos SET `task` = "'.$task.'", `duedate` = "'.$duedate.'",`createddate` = "'.$createddate.'" WHERE taskid = "'.$item_id.'"';
     $result = runQuery($sql);
-
+/*
     $owner_id = $_COOKIE['ownerid'];
     $fname = $_COOKIE['fname'];
     $lname = $_COOKIE['lname'];
     header("Location: newtask.php?userid=$userid&fname=$fname&lname=$lname");
+*/
 }
 
 ?>

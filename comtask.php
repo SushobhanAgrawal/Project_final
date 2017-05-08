@@ -71,6 +71,7 @@
     </div>
   </div>
 </div>
+<br><hr><br>
 <a href = "newtask.php">New Task</a>
 </body>
 </html>
