@@ -13,6 +13,7 @@
 
   <div class="container" style="color:black"> 
     <form method="post" action="index.php" >
+   
       <div class="form-group">
         <label>Task:</label>
         <input type="text" name="task" class="form-control" id="task" placeholder="Enter Task">
@@ -26,7 +27,6 @@
         <input type="date" name="duedate" class="form-control" id="duedate">
       </div>
       <div class="form-group">
-        <label>Due Date:</label>
         <input type="hidden" name="action" class="form-control" value="add_task">
       </div>
       <div class="form-group">
