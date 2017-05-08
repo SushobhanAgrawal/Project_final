@@ -21,7 +21,7 @@
         <input type="date" name="createddate" class="form-control" id="createddate" />
       </div>
       <div class="form-group">
-        <input type="hidden" name="item_id" class="form-control" id="item_id" value="<?php echo $item_id;?>" />
+        <input type="hidden" name="item_id" class="form-control" id="item_id" value="<?php echo $id;?>" />
       </div>
       <div class="form-group">
         <label>Due Date:</label>
