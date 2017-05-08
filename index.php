@@ -36,10 +36,10 @@ else if($action == 'register')
 
    $user_exists = createUser($name,$pass,$firstname,$lastname,$email);
    header("Location: login.php");
-}
-else{
- header("Location: view/badInfo.php");
-    }
+}//
+//else{
+ //header("Location: view/badInfo.php");
+   // }
 
 else if($action == "edit"){
     $id = $_POST['item_id'];
