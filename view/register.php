@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
-include_once("model/db_register.php");
-include_once("model/db.php");
+include_once("../model/db_register.php");
+include_once("../model/db.php");
 ?>
 <html>
 <head>
