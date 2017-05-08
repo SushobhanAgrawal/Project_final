@@ -16,16 +16,12 @@ else if($action=='test_user')
       $username = $_POST['username'];
       $password = $_POST['password'];
       $suc = isUserValid($username,$password);
-      
+     
        if($suc == true){
-        
-
 	include_once('todo.php');
        }
         else{
-
  header("Location: view/badInfo.php");
-
         }
 }
 
@@ -46,7 +42,7 @@ else{
     }
 else if($action == "edit"){
     $id = $_POST['item_id'];
-    header("Location: edit.php?itemid=$id");
+    header("Location: edit.php");
 
 }else if($action == "delete"){
 
