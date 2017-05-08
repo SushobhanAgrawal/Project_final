@@ -40,7 +40,7 @@ else if($action == 'register')
 else{
  header("Location: view/badInfo.php");
     }
-/*
+
 else if($action == "edit"){
     $id = $_POST['item_id'];
     header("Location: edit.php");
@@ -48,63 +48,63 @@ else if($action == "edit"){
 }else if($action == "delete"){
 
     $id = $_POST['item_id'];
-    $sql = 'delete from my_tasks where taskid = "'.$id.'"';
+    $sql = 'delete from todos where taskid = "'.$id.'"';
     $results = runQuery($sql);
 
-    $owner_id = $_COOKIE['ownerid'];
+    $owner_id = $_COOKIE['userid'];
     $fname = $_COOKIE['fname'];
     $lname = $_COOKIE['lname'];
-    header("Location: newtask.php?ownerid=$owner_id&fname=$fname&lname=$lname");
+    header("Location: newtask.php?userid=$userid&fname=$fname&lname=$lname");
 
 }else if($action == "complete"){
     $item_id = $_POST['item_id'];
     $isdone = 1;
-    $sql ='UPDATE my_tasks SET `isdone` = "'.$isdone.'" WHERE taskid = "'.$item_id.'"';
+    $sql ='UPDATE todos SET `isdone` = "'.$isdone.'" WHERE taskid = "'.$item_id.'"';
     $result = runQuery($sql);
 
-    $owner_id = $_COOKIE['ownerid'];
+    $userid = $_COOKIE['userid'];
     $fname = $_COOKIE['fname'];
     $lname = $_COOKIE['lname'];
-    header("Location: newtask.php?ownerid=$owner_id&fname=$fname&lname=$lname");
+    header("Location: newtask.php?userid=$userid&fname=$fname&lname=$lname");
 
 }else if($action == "incomplete"){
     $item_id = $_POST['item_id'];
     $isdone = 0;
-    $sql ='UPDATE my_tasks SET `isdone` = "'.$isdone.'" WHERE taskid = "'.$item_id.'"';
+    $sql ='UPDATE todos SET `isdone` = "'.$isdone.'" WHERE taskid = "'.$item_id.'"';
     $result = runQuery($sql);
 
-    $owner_id = $_COOKIE['ownerid'];
+    $userid = $_COOKIE['userid'];
     $fname = $_COOKIE['fname'];
     $lname = $_COOKIE['lname'];
-    header("Location: newtask.php?ownerid=$owner_id&fname=$fname&lname=$lname");
+    header("Location: newtask.php?userid=$userid&fname=$fname&lname=$lname");
 
 }else if($action == "add_task"){
-    $ownerid = $_COOKIE['ownerid'];
-    $owner_email = $_COOKIE['owner_email'];
+    $userid = $_COOKIE['userid'];
+    $useremail = $_COOKIE['useremail'];
     $due_date = $_POST['duedate'];
     $create_date = $_POST['createddate'];
     $task = $_POST['task'];
     $isdone = 0;
-    $sql = 'INSERT INTO my_tasks (`owneremail`, `ownerid`, `createddate`, `duedate`, `task`, `isdone`) VALUES ("'.$owner_email.'", "'.$ownerid.'", "'.$create_date.'", "'.$due_date.'", "'.$task.'", "'.$isdone.'")';
+    $sql = 'INSERT INTO todos (`useremail`, `userid`, `createddate`, `duedate`, `task`, `isdone`) VALUES ("'.$useremail.'", "'.$userid.'", "'.$create_date.'", "'.$due_date.'", "'.$task.'", "'.$isdone.'")';
     $result = runQuery($sql);
 
-    $owner_id = $_COOKIE['ownerid'];
+    $userid = $_COOKIE['userid'];
     $fname = $_COOKIE['fname'];
     $lname = $_COOKIE['lname'];
-    header("Location: newtask.php?ownerid=$owner_id&fname=$fname&lname=$lname");
+    header("Location: newtask.php?userid=$userid&fname=$fname&lname=$lname");
 
 }else if($action == 'after_edit'){
     $task = $_POST['task'];
     $duedate = $_POST['duedate'];
     $createddate = $_POST['createddate'];
     $item_id = $_POST['item_id'];
-    $sql ='UPDATE my_tasks SET `task` = "'.$task.'", `duedate` = "'.$duedate.'",`createddate` = "'.$createddate.'" WHERE taskid = "'.$item_id.'"';
+    $sql ='UPDATE todos SET `task` = "'.$task.'", `duedate` = "'.$duedate.'",`createddate` = "'.$createddate.'" WHERE taskid = "'.$item_id.'"';
     $result = runQuery($sql);
 
     $owner_id = $_COOKIE['ownerid'];
     $fname = $_COOKIE['fname'];
     $lname = $_COOKIE['lname'];
-    header("Location: newtask.php?ownerid=$owner_id&fname=$fname&lname=$lname");
+    header("Location: newtask.php?userid=$userid&fname=$fname&lname=$lname");
 }
-*/
+
 ?>
