@@ -15,7 +15,7 @@
 <body>
 <hr size="100">
   <?php
-  echo "<div style='text-align:right'><h2>Welcome ".$_COOKIE['login']." !!</h2></div>";
+  echo "<div style='text-align:right'><h1>Welcome ".$_COOKIE['login']." !!</h1></div>";
   ?><hr>
 
 
@@ -28,17 +28,14 @@
                 <thead>
                   <th style="width:65%">Task</th>
                   <th style="width:10%">Due Date</th>
-                  <th style="width:10%">Edit</th>
-                  <th style="width:10%">Delete</th>
-                  <th style="width:10%">Status</th>
-                </thead>
+                  </thead>
                 <table>
                    <?php foreach($result as $res):?>
                     <tr>                    
                       <?php $item_status = $res['isdone'];?>
                        <?php if($item_status == 0): ?>
-                      
-                        <td style="width:65%"> <?php echo $res['task'];?></td>
+                       
+                        <td style="width:40%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <?php echo $res['task'];?></td>
                         <td style="width:10%"> <?php echo $res['duedate'];?></td>
                         <td style="width:10%">
                           <form action = 'index.php' method = 'post' >
@@ -66,22 +63,19 @@
                   <?php endforeach;?>
                 </table>
             </table>
-            
+            <hr><hr><br>
             <table id="mytable" class="table table-bordred table-striped" style="color:black;">
                 <thead>
                   <th style="width:65%">Task</th>
                   <th style="width:10%">Due Date</th>
-                  <th style="width:10%">Edit</th>
-                  <th style="width:10%">Delete</th>
-                  <th style="width:10%">Status</th>
-                </thead>
+                 </thead>
                 <table>
                    <?php foreach($result as $res):?>
                     <tr>                    
                       <?php $item_status = $res['isdone'];?>
                        <?php if($item_status == 1): ?>
                       
-                        <td style="width:65%"> <?php echo $res['task'];?></td>
+                        <td style="width:65%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <?php echo $res['task'];?></td>
                         <td style="width:10%"> <?php echo $res['duedate'];?></td>
                         <td style="width:10%">
                           <form action = 'index.php' method = 'post' >
@@ -113,5 +107,7 @@
   </div>
 </div>
 <br><hr><br>
+<a href = "logout.php"><b><h2>LOGOUT</h2></b></a>
+<hr>
 </body>
 </html>
