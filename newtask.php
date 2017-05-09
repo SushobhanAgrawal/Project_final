@@ -113,6 +113,5 @@
   </div>
 </div>
 <br><hr><br>
-<a href = "comtask.php">Completed task</a>
 </body>
 </html>
