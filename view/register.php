@@ -22,6 +22,8 @@ value="female">Female<br>
 <input type="radio" name="gender"
 <?php if (isset($gender) && $gender=="male") echo "checked";?>
 value="male">Male<br><br>
+Phone Number : <br><input type="number" name="pnum" placeholder="Enter phone number" required /><br><br>
+Birth Date : <br><input type="date" name="bday" required /><br><br>
 User Name : <input type="text" name="username" placeholder="Enter Username" required /><br><br>
 Email : <br><input type="email" name="email" placeholder="Enter Email" required /><br><br>
 Password : <input type="password" name="password" placeholder="Enter Password" required /><br><br>
