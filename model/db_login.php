@@ -13,26 +13,32 @@ $count=$statement->rowCount();
   {
     $fullname=$result[0]['fname']." ".$result[0]['lname'];
     $username=$result[0]['username'];
+    $id=$result[0]['id'];
     setcookie('login',$fullname);
     setcookie('userid',$username);
+    setcookie('id',$id);
+    
+
     return true;
   }
   else 
   {
      unset($_COOKIE['login']);
      unset($_COOKIE['userid']);
-        setcookie('login', false);
-        setcookie('userid', false);
-        return false;    
+     unset($_COOKIE['id']);
+     setcookie('login', false);
+     setcookie('userid', false);
+     setcookie('id', false);
+     return false;    
   }
 }
 
-function addItem($userid, $useremail, $createddate, $task, $duedate, $isdone)
+function addItem($id, $useremail, $createddate, $task, $duedate, $isdone)
 {
  global $db;
  $query = 'INSERT INTO todos (userid, useremail, createdate, task, duedate, isdone) VALUES (:userid, :useremail, :createdate, :task, :duedate, :isdone)';
 $statement = $db-> prepare($query);
-$statement->bindValue(':userid',$userid);
+$statement->bindValue(':userid',$id);
 $statement->bindValue(':useremail',$useremail);
 $statement->bindValue(':createdate',$createdate);
 $statement->bindValue(':task',$task);

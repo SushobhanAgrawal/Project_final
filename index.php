@@ -20,7 +20,8 @@ else if($action=='test_user')
       $suc = isUserValid($username,$password);
      
        if($suc == true){
-       $result = getItem($username);   
+        $id= $_COOKIE['id'];
+       $result = getItem($id);   
 	     include('newtask.php');
        }
         else{
@@ -52,32 +53,26 @@ else if($action == "edit"){
 
     $id = $_POST['item_id'];
     deleteItem($id);
-//    $results = runQuery($sql);
-
     $userid = $_COOKIE['userid'];
     $fname = $_COOKIE['login'];
-    $result = getItem($userid);   
+    $id= $_COOKIE['id'];
+    $result = getItem($id);  
     include("newtask.php");
-    //include("newtask.php?userid=$userid&fname=$fname");
-    
+        
 }else if($action == "complete"){
     $item_id = $_POST['item_id'];
     $isdone = 1;
-   // $sql ='UPDATE todos SET `isdone` = "'.$isdone.'" WHERE taskid = "'.$item_id.'"';
-//    $result = runQuery($sql);
     completeItem($item_id,$isdone);
     $userid = $_COOKIE['userid'];
     $fname = $_COOKIE['login'];
-     $result = getItem($userid);   
+    $id= $_COOKIE['id'];
+    $result = getItem($id);  
     include("newtask.php");
-   // header("Location: newtask.php?userid=$userid&fname=$fname");
-    
+       
 }else if($action == "incomplete"){
     $item_id = $_POST['taskid'];
     $isdone = 0;
     $sql ='UPDATE todos SET `isdone` = "'.$isdone.'" WHERE taskid = "'.$item_id.'"';
- //   $result = runQuery($sql);
-
     $userid = $_COOKIE['userid'];
     $fname = $_COOKIE['login'];
     header("Location: newtask.php?userid=$userid&fname=$fname");
@@ -85,29 +80,27 @@ else if($action == "edit"){
 }else if($action == "add_task"){
     $userid = $_COOKIE['userid'];
     $useremail = $_COOKIE['login'];
+    $id= $_COOKIE['id'];
     $due_date = $_POST['duedate'];
     $create_date = $_POST['createddate'];
     $task = $_POST['task'];
     $isdone = 0;
-    addItem($userid, $useremail, $create_date, $task, $due_date, $isdone);
-   //  $userid = $_COOKIE['userid'];
-    //$fname = $_COOKIE['login'];
-    $result = getItem($userid);   
+    echo $id;
+   // addItem($userid, $useremail, $create_date, $task, $due_date, $isdone, $id);
+    addItem($id, $useremail, $create_date, $task, $due_date, $isdone);
+   $result = getItem($id);   
     include("newtask.php");
-    //include("newtask.php?userid=$userid&fname=$fname&result=$result");
-    
+       
 }else if($action == 'after_edit'){
     $task = $_POST['task'];
     $duedate = $_POST['duedate'];
     $createddate = $_POST['createddate'];
     $item_id = $_POST['item_id'];
-   // $sql ='UPDATE todos SET `task` = "'.$task.'", `duedate` = "'.$duedate.'",`createddate` = "'.$createddate.'" WHERE taskid = "'.$item_id.'"';
-//    $result = runQuery($sql);
     editItem($task,$duedate,$createddate,$item_id);
     $userid = $_COOKIE['userid'];
     $fname = $_COOKIE['login'];
-   // header("Location: newtask.php?userid=$userid&fname=$fname");
-    $result = getItem($userid);   
+    $id= $_COOKIE['id'];
+    $result = getItem($id);  
     include("newtask.php");
 }
 
